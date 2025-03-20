@@ -96,6 +96,10 @@ section.formulaire {
     gap: 20px;
 }
 
+section.formulaire h2 {
+    text-align: center;
+}
+
 .form-note {
     text-align: center;
     color: #666;
