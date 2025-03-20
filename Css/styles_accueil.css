@@ -1,0 +1,379 @@
+body {
+    background: #C9FFBF;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #FFAFBD, #C9FFBF);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #FFAFBD, #C9FFBF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    margin: 0;
+    text-align: center;
+    
+}
+
+p{
+    font-size: 25px;
+}
+
+section.top-page1 {
+    background: url("../Arrière_plan_haut/pexels-padrinan-255377.jpg");
+    background-size: cover;
+    height: 40vh;
+    padding: 25px;
+    position: relative;
+}
+
+section.top-page1::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100px;
+    background: linear-gradient(to bottom, transparent, #FFAFBD);
+}
+
+section.nom {
+    font-size: 4.5em;
+    text-align: center;
+    margin: 80px 0;
+    color: #2c3e50;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    position: relative;
+    animation: slideInDown 1s ease;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 40px 0;
+}
+
+section.nom::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(to right, #FFAFBD, #C9FFBF);
+    border-radius: 2px;
+    animation: widthGrow 1s ease;
+}
+
+section.nom::after {
+    content: '✨';
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.5em;
+    opacity: 0.8;
+    animation: sparkle 2s ease-in-out infinite;
+}
+
+@keyframes widthGrow {
+    from { width: 0; }
+    to { width: 100px; }
+}
+
+@keyframes slideInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+section.citation {
+    font-size: 2.5em;
+    font-style: italic;
+    text-align: center;
+    margin: 100px auto;
+    max-width: 1000px;
+    color: #2c3e50;
+    position: relative;
+    padding: 60px 100px;
+    animation: fadeIn 1.5s ease;
+    line-height: 1.8;
+}
+
+section.citation::before {
+    content: '«';
+    position: absolute;
+    left: -30px;
+    top: -60px;
+    transform: translateX(-50%) rotate(180deg);
+    font-size: 4em;
+    opacity: 0.8;
+    animation: rotate 4s ease-in-out infinite;
+    color: #2c3e50;
+}
+
+section.citation::after {
+    content: '»';
+    position: absolute;
+    right: -30px;
+    top: 0;
+    transform: translateY(-50%);
+    font-size: 4em;
+    opacity: 0.8;
+    animation: rotate 4s ease-in-out infinite reverse;
+    color: #2c3e50;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes floatIcon {
+    0%, 100% {
+        transform: translateY(0) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-10px) rotate(5deg);
+    }
+}
+
+@keyframes sparkle {
+    0%, 100% {
+        opacity: 0.8;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+}
+
+@keyframes rotate {
+    0%, 100% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(15deg);
+    }
+}
+
+h2 {
+    font-size: 60px;
+}
+
+img {
+    width: 300px;
+}
+
+section.intro {
+    margin: 70px auto;
+    width: 80%;
+    max-width: 1000px;
+    font-size: 25px;
+    padding: 0 40px;
+    position: relative;
+}
+
+section.intro1 {
+    position: relative;
+    padding-left: 100px;
+    margin-bottom: 80px;
+}
+
+section.intro1::before {
+    content: '💫';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 3em;
+    opacity: 0.8;
+    animation: floatIcon 3s ease-in-out infinite;
+    transition: all 0.3s ease;
+}
+
+section.intro1:hover::before {
+    transform: translateY(-50%) scale(1.2) rotate(360deg);
+    opacity: 1;
+    animation: none;
+}
+
+section.intro2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    position: relative;
+    padding-left: 100px;
+    margin-bottom: 100px;
+}
+
+section.intro2::before {
+    content: '🎓';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 3em;
+    opacity: 0.8;
+    animation: bounce 2s ease-in-out infinite;
+    transition: all 0.3s ease;
+}
+
+section.intro2:hover::before {
+    transform: translateY(-50%) scale(1.2) translateX(10px);
+    opacity: 1;
+    animation: none;
+}
+
+section.intro3 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    position: relative;
+    padding-left: 100px;
+    margin-bottom: 100px;
+}
+
+section.intro3::before {
+    content: '🌟';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 3em;
+    opacity: 0.8;
+    animation: floatIcon 3s ease-in-out infinite;
+    transition: all 0.3s ease;
+}
+
+section.intro3:hover::before {
+    transform: translateY(-50%) scale(1.2) translateX(-10px);
+    opacity: 1;
+    animation: none;
+}
+
+section.intro4 {
+    width: 80%;
+    max-width: 1000px;
+    margin: 100px auto 140px;
+    font-size: 80px;
+    position: relative;
+    padding: 40px;
+    background: linear-gradient(135deg, rgba(255, 175, 189, 0.1), rgba(201, 255, 191, 0.1));
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+    transition: all 0.3s ease;
+}
+
+section.intro4:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+section.intro4 p {
+    position: relative;
+    z-index: 1;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    line-height: 1.2;
+}
+
+section.intro4::before {
+    content: '✨';
+    position: absolute;
+    right: -220px;
+    bottom: -40px;
+    font-size: 2em;
+    opacity: 0.8;
+    animation: sparkle 2s ease-in-out infinite;
+    transition: all 0.3s ease;
+}
+
+section.intro4::after {
+    content: '🎯';
+    position: absolute;
+    left: -200px;
+    bottom: -40px;
+    font-size: 2.5em;
+    opacity: 0.8;
+    animation: bounce 2s ease-in-out infinite;
+    transition: all 0.3s ease;
+}
+
+section.intro4:hover::before {
+    transform: scale(1.2) rotate(-360deg);
+    opacity: 1;
+    animation: none;
+}
+
+section.intro4:hover::after {
+    transform: scale(1.2) translateX(10px);
+    opacity: 1;
+    animation: none;
+}
+
+footer.footer {
+    background: url("../Arrière_plan_haut/pexels-padrinan-255377.jpg");
+    background-size: cover;
+    height: 80px;
+    padding: 25px;
+}
+
+div.texte2 {
+    width: 500px;
+    height: 450px;
+    margin-right: 60px;
+}
+
+div.texte3 {
+    width: 500px;
+    height: 250px;
+    margin-top: 60px;
+    margin-left: 60px;
+}
+
+div.image2 {
+    margin-top: 80px;
+}
+
+div.image3 {
+    margin-top: 80px;
+}
+
+div.image2 img, div.image3 img {
+    width: 300px;
+    transition: all 0.5s ease;
+    filter: grayscale(30%);
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% { transform: translateY(0px) rotate(0deg); }
+    25% { transform: translateY(-15px) rotate(2deg); }
+    50% { transform: translateY(0px) rotate(0deg); }
+    75% { transform: translateY(15px) rotate(-2deg); }
+    100% { transform: translateY(0px) rotate(0deg); }
+}
+
+div.image2 img:hover {
+    transform: scale(1.1) rotate(5deg);
+    filter: grayscale(0%);
+}
+
+div.image3 img:hover {
+    transform: scale(1.1) rotate(-5deg);
+    filter: grayscale(0%);
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}

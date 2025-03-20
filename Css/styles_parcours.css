@@ -1,0 +1,481 @@
+body {
+    background: #B2FEFA;  /* fallback for old browsers */
+    /* background: -webkit-linear-gradient(to right, #0ED2F7, #B2FEFA);  Chrome 10-25, Safari 5.1-6 */
+    /* background: linear-gradient(to right, #0ED2F7, #B2FEFA); W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    margin: 0;
+}
+
+section.top-page3 {
+    background: url("../Arrière_plan_haut/pexels-dana-tentis-118658-370799.jpg");
+    background-size: cover;
+    height: 30vh;
+    padding: 25px;
+    position: relative;
+    display: flex;
+    /* flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center; */
+    color: white;
+}
+
+section.top-page3::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+    background: linear-gradient(to bottom, transparent,#B2FEFA);
+}
+
+section.dev {
+    margin: 30px auto;
+    width: 90%;
+    max-width: 1400px;
+    font-weight: 350;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    background: linear-gradient(to right,#B2FEFA, #00c6ff);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+div.dev {
+    width: 800px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+div.image1 {
+    margin-top: 30px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+section.projet {
+    margin: 70px auto 30px auto;
+    width: 90%;
+    max-width: 1000px;
+    font-weight: 350;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    background: linear-gradient(to right,#00c6ff,#B2FEFA);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+div.text {
+    margin-top: 50px;
+    font-size: 1.1em;
+    color: #333;
+}
+
+section.formation {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto 100px auto;
+    width: 90%;
+    max-width: 1500px;
+    padding: 20px;
+    background: linear-gradient(to right,#B2FEFA, #00c6ff);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section.formation:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+section.experiencepro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto 100px auto;
+    width: 90%;
+    max-width: 1500px;
+    padding: 20px;
+    background: linear-gradient(to right,#B2FEFA, #00c6ff);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section.experiencepro:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Ajustement des images dans les sections */
+section.formation img, section.experiencepro img {
+    width: 100%;
+    height: auto;
+    max-width: 1200px;
+    margin: 0 auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+section.formation img:hover, section.experiencepro img:hover {
+    transform: scale(1.05);
+}
+
+section.formation img {
+    width: 60%; /* Réduire la largeur à 60% */
+    height: auto;
+    max-width: 600px; /* Réduire la largeur maximale */
+    margin: 0 auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+div.formation {
+    width: 50px;
+    margin-top: 80px;
+    margin-left: 250px;
+    margin-bottom: 70px;
+    
+}
+
+footer.footer {
+    background: url("../Arrière_plan_haut/pexels-dana-tentis-118658-370799.jpg");
+    background-size: cover;
+    height: 80px;
+    padding: 25px;
+}
+
+/* Animation pour les images */
+div.image1 img, div.image2 img {
+    transition: transform 0.3s ease;
+}
+
+div.image1 img:hover, div.image2 img:hover {
+    transform: scale(1.05); /* Zoom léger au survol */
+}
+
+/* Effet de parallaxe pour les sections avec images de fond */
+section.top-page3, footer.footer {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Animation d'apparition pour les textes */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+h1.big-title, h2, p {
+    animation: fadeIn 1s ease-in-out;
+}
+
+section.experiencepro img {
+    width: 100%; /* Prendre toute la largeur disponible */
+    height: auto; /* Maintenir le ratio d'aspect */
+    max-width: 1040px; /* Augmenter de 30% (800px + 30% = 1040px) */
+    margin: 0 auto; /* Centrer l'image */
+}
+
+/* Ajout d'éléments décoratifs flottants */
+.floating-element {
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    background: linear-gradient(45deg, #00c6ff, #B2FEFA);
+    border-radius: 50%;
+    opacity: 0.3;
+    animation: float 6s infinite ease-in-out;
+    z-index: -1;
+}
+
+.floating-element:nth-child(1) { top: 10%; left: 10%; animation-delay: 0s; }
+.floating-element:nth-child(2) { top: 20%; right: 15%; animation-delay: 1s; }
+.floating-element:nth-child(3) { bottom: 30%; left: 20%; animation-delay: 2s; }
+.floating-element:nth-child(4) { bottom: 40%; right: 25%; animation-delay: 3s; }
+
+@keyframes float {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-20px) rotate(180deg); }
+}
+
+/* Animation pour les titres */
+h1.big-title {
+    position: relative;
+    display: inline-block;
+}
+
+h1.big-title::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(to right, #00c6ff, #B2FEFA);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+h1.big-title:hover::after {
+    transform: scaleX(1);
+}
+
+/* Effet de brillance sur les sections */
+section.dev, section.projet, section.formation, section.experiencepro {
+    position: relative;
+    overflow: hidden;
+}
+
+section.dev::before, section.projet::before, section.formation::before, section.experiencepro::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+        45deg,
+        transparent,
+        rgba(255, 255, 255, 0.1),
+        transparent
+    );
+    transform: rotate(45deg);
+    animation: shine 3s infinite;
+}
+
+@keyframes shine {
+    0% { transform: translateX(-100%) rotate(45deg); }
+    100% { transform: translateX(100%) rotate(45deg); }
+}
+
+/* Animation pour les images */
+section.formation img, section.experiencepro img {
+    transition: all 0.5s ease;
+}
+
+section.formation img:hover, section.experiencepro img:hover {
+    transform: scale(1.05) rotate(1deg);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Effet de pulsation pour les sections */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.02); }
+    100% { transform: scale(1); }
+}
+
+section.dev:hover, section.projet:hover, section.formation:hover, section.experiencepro:hover {
+    animation: pulse 1s ease-in-out;
+}
+
+/* Style pour les icônes */
+.fas, .fab {
+    margin-right: 10px;
+    color: #00c6ff;
+    transition: transform 0.3s ease;
+}
+
+.fas:hover, .fab:hover {
+    transform: scale(1.2);
+    color: #B2FEFA;
+}
+
+/* Style pour les liens sociaux dans le footer */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 24px;
+    transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #B2FEFA;
+    transform: translateY(-5px);
+}
+
+/* Ajustement des titres avec icônes */
+h1.big-title i, h2 i {
+    margin-right: 15px;
+    font-size: 1.2em;
+}
+
+/* Animation pour les icônes dans la navigation */
+.nav a i {
+    transition: transform 0.3s ease;
+}
+
+.nav a:hover i {
+    transform: translateX(5px);
+}
+
+/* Style pour les listes */
+li {
+    list-style: none;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+}
+
+/* Ajustement de l'espacement pour les icônes dans les listes */
+li i {
+    margin-right: 15px;
+    min-width: 20px;
+    text-align: center;
+}
+
+/* Media Queries pour la responsivité */
+@media screen and (max-width: 1200px) {
+    .container {
+        width: 95%;
+        padding: 0 20px;
+    }
+    
+    .timeline {
+        padding: 30px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .timeline {
+        padding: 25px;
+    }
+    
+    .timeline-item {
+        padding: 20px;
+    }
+    
+    .timeline-content {
+        padding: 15px;
+    }
+    
+    .timeline-content h3 {
+        font-size: 1.2em;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    section.top-page3 {
+        height: 25vh;
+    }
+    
+    .container {
+        margin: 20px auto;
+    }
+    
+    .timeline {
+        padding: 20px;
+    }
+    
+    .timeline::before {
+        left: 20px;
+    }
+    
+    .timeline-item {
+        padding-left: 50px;
+        padding-right: 15px;
+    }
+    
+    .timeline-content {
+        padding: 12px;
+    }
+    
+    .timeline-content h3 {
+        font-size: 1.1em;
+    }
+    
+    .timeline-content p {
+        font-size: 0.9em;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    section.top-page3 {
+        height: 20vh;
+        padding: 15px;
+    }
+    
+    .container {
+        padding: 0 15px;
+    }
+    
+    .timeline {
+        padding: 15px;
+    }
+    
+    .timeline::before {
+        left: 15px;
+    }
+    
+    .timeline-item {
+        padding-left: 40px;
+        padding-right: 10px;
+    }
+    
+    .timeline-content {
+        padding: 10px;
+    }
+    
+    .timeline-content h3 {
+        font-size: 1em;
+    }
+    
+    .timeline-content p {
+        font-size: 0.8em;
+    }
+    
+    .timeline-item i {
+        font-size: 1.2em;
+    }
+}
+
+/* Ajustements pour les très petits écrans */
+@media screen and (max-width: 320px) {
+    section.top-page3 {
+        height: 15vh;
+        padding: 10px;
+    }
+    
+    .big-title {
+        font-size: 1.2em;
+    }
+    
+    .timeline::before {
+        left: 12px;
+    }
+    
+    .timeline-item {
+        padding-left: 35px;
+        padding-right: 8px;
+    }
+    
+    .timeline-content h3 {
+        font-size: 0.9em;
+    }
+    
+    .timeline-content p {
+        font-size: 0.75em;
+    }
+    
+    .timeline-item i {
+        font-size: 1em;
+    }
+}

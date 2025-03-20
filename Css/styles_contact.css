@@ -1,0 +1,451 @@
+body {
+    background: #1CD8D2;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #93EDC7, #1CD8D2);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #93EDC7, #1CD8D2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    margin: 0;    
+    font-family: 'Arial', sans-serif;
+}
+
+section.top-page4 {
+    background: url("../Arrière_plan_haut/dots-5719366_1280.jpg");
+    background-size: cover;
+    height: 30vh;
+    padding: 25px;
+    position: relative;
+}
+
+section.top-page4::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+    background: linear-gradient(to bottom, transparent, #1CD8D2);
+}
+
+section.coordonees {
+    margin: 30px auto;
+    width: 90%;
+    max-width: 1000px;
+    font-weight: 350;
+    padding: 0 30px;
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.contact {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    flex: 1;
+}
+
+.contact h2 {
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.contact-info p {
+    margin: 15px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.contact-info i {
+    color: #1CD8D2;
+    font-size: 1.2em;
+}
+
+.contact-info a {
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-info a:hover {
+    color: #1CD8D2;
+}
+
+.carte {
+    flex: 1;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.carte iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+section.formulaire {
+    margin: 30px auto 100px auto;
+    width: 90%;
+    max-width: 800px;
+    font-size: 20px;
+    font-weight: 350;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+
+.form-note {
+    text-align: center;
+    color: #666;
+    font-style: italic;
+    margin-bottom: 30px;
+}
+
+.contact-form {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+fieldset {
+    border: none;
+    margin-bottom: 25px;
+    position: relative;
+}
+
+fieldset label {
+    display: block;
+    margin-bottom: 8px;
+    color: #2c3e50;
+    font-weight: 500;
+    font-size: 0.9em;
+    letter-spacing: 0.5px;
+}
+
+fieldset input, fieldset textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 16px;
+    background: #ffffff;
+    transition: all 0.3s ease;
+    color: #2c3e50;
+    box-sizing: border-box;
+}
+
+fieldset input[type="email"] {
+    width: 100%;
+    min-width: 300px;
+    max-width: 100%;
+}
+
+fieldset input[type="text"], fieldset input[type="tel"] {
+    width: 100%;
+    min-width: 200px;
+}
+
+fieldset input:hover, fieldset textarea:hover {
+    background: #f0f9f8;
+    border-color: #1CD8D2;
+}
+
+fieldset input:focus, fieldset textarea:focus {
+    outline: none;
+    background: #ffffff;
+    border-color: #1CD8D2;
+    box-shadow: 0 0 0 3px rgba(29, 216, 210, 0.1);
+}
+
+fieldset textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+/* Style pour les champs requis */
+fieldset input:required:invalid,
+fieldset textarea:required:invalid {
+    border-color: #1CD8D2;
+    background: #fff5f5;
+}
+
+/* Style pour les placeholders */
+fieldset input::placeholder,
+fieldset textarea::placeholder {
+    color: #95a5a6;
+    opacity: 0.8;
+}
+
+div.bouton {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+div.bouton input[type="submit"] {
+    background: linear-gradient(135deg, #1CD8D2, #93EDC7);
+    color: white;
+    padding: 15px 40px;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+div.bouton input[type="submit"]:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(29, 216, 210, 0.3);
+}
+
+div.bouton input[type="submit"]:active {
+    transform: translateY(0);
+}
+
+/* Animation pour les champs requis */
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    75% { transform: translateX(5px); }
+}
+
+fieldset input:required:invalid:focus,
+fieldset textarea:required:invalid:focus {
+    animation: shake 0.5s ease-in-out;
+}
+
+/* Style pour les groupes de champs */
+.nom, .mail {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+footer.footer {
+    background: url("../Arrière_plan_haut/dots-5719366_1280.jpg");
+    background-size: cover;
+    height: 80px;
+    padding: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-links {
+    display: flex;
+    gap: 20px;
+}
+
+.social-link {
+    color: white;
+    font-size: 24px;
+    transition: all 0.3s ease;
+}
+
+.social-link:hover {
+    color: #1CD8D2;
+    transform: translateY(-3px);
+}
+
+@media (max-width: 768px) {
+    section.coordonees {
+        flex-direction: column;
+    }
+    
+    .contact, .carte {
+        width: 100%;
+    }
+    
+    .carte iframe {
+        height: 300px;
+    }
+    
+    .nom, .mail {
+        grid-template-columns: 1fr;
+    }
+    
+    .contact-form {
+        padding: 20px;
+    }
+}
+
+/* Style pour les notifications */
+.notification {
+    text-align: center;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    display: none;
+}
+
+.notification.success {
+    display: block;
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.notification.error {
+    display: block;
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+/* Media Queries pour la responsivité */
+@media screen and (max-width: 1200px) {
+    section.coordonees {
+        width: 95%;
+        padding: 0 20px;
+    }
+    
+    .contact-form {
+        padding: 30px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    section.coordonees {
+        flex-direction: column;
+        gap: 30px;
+    }
+    
+    .contact, .carte {
+        width: 100%;
+    }
+    
+    .carte iframe {
+        height: 400px;
+    }
+    
+    .contact-form {
+        padding: 25px;
+    }
+    
+    .nom, .mail {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    section.top-page4 {
+        height: 25vh;
+        padding: 15px;
+    }
+    
+    section.coordonees {
+        margin: 20px auto;
+        padding: 0 15px;
+    }
+    
+    .contact {
+        padding: 20px;
+    }
+    
+    .contact-info p {
+        font-size: 0.9em;
+    }
+    
+    .contact-form {
+        padding: 20px;
+    }
+    
+    fieldset input[type="email"] {
+        min-width: 100%;
+    }
+    
+    .nom, .mail {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .carte iframe {
+        height: 300px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    section.top-page4 {
+        height: 20vh;
+        padding: 10px;
+    }
+    
+    section.coordonees {
+        padding: 0 10px;
+    }
+    
+    .contact h2, .formulaire h2 {
+        font-size: 1.5em;
+    }
+    
+    .contact-info p {
+        font-size: 0.8em;
+    }
+    
+    .contact-form {
+        padding: 15px;
+    }
+    
+    fieldset label {
+        font-size: 0.8em;
+    }
+    
+    fieldset input, fieldset textarea {
+        font-size: 14px;
+        padding: 10px;
+    }
+    
+    div.bouton input[type="submit"] {
+        padding: 12px 30px;
+        font-size: 16px;
+    }
+    
+    .carte iframe {
+        height: 250px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    section.top-page4 {
+        height: 15vh;
+        padding: 8px;
+    }
+    
+    .big-title {
+        font-size: 1.2em;
+    }
+    
+    .contact h2, .formulaire h2 {
+        font-size: 1.3em;
+    }
+    
+    .contact-info p {
+        font-size: 0.75em;
+    }
+    
+    fieldset label {
+        font-size: 0.75em;
+    }
+    
+    fieldset input, fieldset textarea {
+        font-size: 13px;
+        padding: 8px;
+    }
+    
+    div.bouton input[type="submit"] {
+        padding: 10px 25px;
+        font-size: 14px;
+    }
+    
+    .carte iframe {
+        height: 200px;
+    }
+}

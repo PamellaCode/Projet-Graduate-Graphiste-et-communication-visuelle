@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="Css/styles.css">
+    <link rel="stylesheet" href="Css/styles_contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <section class="top-page4">
+        <header>
+            <nav class="nav">
+                <li><a href="./index.html">Accueil</a></li>
+                <li><a href="./Qui_suis_je.html">Qui suis-je ?</a></li>
+                <li><a href="./Mon_parcours.html">Parcours</a></li>
+                <li><a href="./Contact.html">Contact</a></li>
+            </nav>
+            <h1 class="big-title">Restons en contact !</h1>   
+        </header>        
+    </section>
+
+    <section class="coordonees">
+        <div class="contact">
+            <h2>Mes coordonnées</h2>
+            <div class="contact-info">
+                <p><i class="fas fa-user"></i> Pamella Defrend</p>
+                <p><i class="fas fa-envelope"></i> <a href="mailto:defrendpamella@gmail.com">defrendpamella@gmail.com</a></p>
+                <p><i class="fas fa-phone"></i> <a href="tel:07.52.76.30.66">07.52.76.30.66</a></p>
+                <p><i class="fas fa-map-marker-alt"></i> Situé à Chamalières</p>
+            </div>
+        </div>
+        <div class="carte">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d22262.826010489596!2d3.0604746999999897!3d45.774131150000024!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47f71a33a244a69d%3A0x4093cafcbe5c850!2sChamali%C3%A8res!5e0!3m2!1sfr!2sfr!4v1741008439442!5m2!1sfr!2sfr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">  
+            </iframe>
+        </div>
+    </section>
+
+    <section class="formulaire">
+        <h2>Contactez-moi ici !</h2>
+        <div id="notification" class="notification"></div>
+
+        <form method="post" action="https://formspree.io/f/mqaperww" class="contact-form">
+            <fieldset class="nom">
+                <p>
+                    <label for="nom">Votre nom : </label> 
+                    <input type="text" name="nom" id="nom" placeholder="Ex. : Martin" size="30" maxlength="20" required>  
+                </p>
+
+                <p>
+                    <label for="prenom">Votre prénom : </label> 
+                    <input type="text" name="prenom" id="prenom" placeholder="Ex. : Mathieu" size="30" maxlength="20" required>  
+                </p> 
+            </fieldset>
+
+            <fieldset class="mail">
+                <p>
+                    <label for="mail">Votre mail : </label> 
+                    <input type="email" name="mail" id="mail" placeholder="Ex. : mathieu.martin@gmail.com" size="30" maxlength="200" required>  
+                </p>
+
+                <p>
+                    <label for="téléphone">Votre téléphone : </label> 
+                    <input type="tel" name="téléphone" id="téléphone" placeholder="Ex. : 07.19.23.55.63" size="30" maxlength="20" required>  
+                </p>  
+            </fieldset>
+
+            <fieldset class="objet">
+                <p>
+                    <label for="objet">Objet : </label> 
+                    <input type="text" name="objet" id="objet" placeholder="Ex. : Objet" size="70" maxlength="20" required>  
+                </p>
+            </fieldset>
+
+            <fieldset class="message">
+                <label for="message">Votre message : </label> <br>
+                <textarea name="message" id="message" placeholder="Ex. : Vous pouvez écrire votre message ici." required></textarea> 
+            </fieldset>
+            
+            <div class="bouton">
+                <input type="submit" value="Envoyer">
+            </div>
+        </form>
+    </section>
+
+    <script>
+        // Récupération des paramètres d'URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const status = urlParams.get('status');
+        
+        // Affichage des messages de notification
+        const notification = document.getElementById('notification');
+        if (status === 'success') {
+            notification.textContent = 'Votre message a été envoyé avec succès !';
+            notification.className = 'notification success';
+        } else if (status === 'error') {
+            notification.textContent = 'Une erreur est survenue lors de l\'envoi du message.';
+            notification.className = 'notification error';
+        }
+    </script>
+
+    <footer class="footer">
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-github"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+        </div>
+    </footer>
+</body>
+</html> 
