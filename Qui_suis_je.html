@@ -79,31 +79,33 @@
         </div>
     </section>
   
-    <section class="lecture">
-        <div class="titre_lecture">
-            <h2>La lecture, un voyage sans fin 📚</h2>
-        </div>
-        <div class="images_lecture">
-            <img src="./Image livre/ai-generated-8772225_1280.jpg" alt="">
-            <img src="./Image livre/pexels-caio-46274.jpg" alt="">
-        </div>
-    </section>
+    <div class="lecture-container">
+        <section class="lecture">
+            <div class="titre_lecture">
+                <h2>La lecture, un voyage sans fin </h2>
+            </div>
+            <div class="images_lecture">
+                <img src="./Image livre/ai-generated-8772225_1280.jpg" alt="">
+                <img src="./Image livre/pexels-caio-46274.jpg" alt="">
+            </div>
+        </section>
 
-    <section class="lecture2">
-        <div class="image_lecture2">
-            <img src="./Image livre/ai-generated-8438585_1280.jpg" alt="">
-        </div>
-        <div class="texte_lecture">
-            <p>Lire, c'est s'évader, explorer des mondes inconnus et vivre mille vies 
-                sans bouger de chez soi. Plongée dans un roman, je peux me déconnecter 
-                du quotidien et laisser libre cours à mon imagination. Cette passion 
-                m'a aussi appris à rester concentrée pendant de longues heures, à analyser 
-                des intrigues complexes et à m'imprégner de chaque détail. Ces compétences 
-                sont essentielles dans le développement d'applications, où il faut être 
-                minutieux, structurer son raisonnement et résoudre des problèmes de manière 
-                logique et efficace.</p>
-        </div>
-    </section>
+        <section class="lecture2">
+            <div class="image_lecture2">
+                <img src="./Image livre/ai-generated-8438585_1280.jpg" alt="">
+            </div>
+            <div class="texte_lecture">
+                <p>Lire, c'est s'évader, explorer des mondes inconnus et vivre mille vies 
+                    sans bouger de chez soi. Plongée dans un roman, permet de me déconnecter 
+                    du quotidien et laisser libre cours à mon imagination. Cette passion 
+                    m'a aussi appris à rester concentrée pendant de longues heures, à analyser 
+                    des intrigues complexes et à m'imprégner de chaque détail. Ces compétences 
+                    sont essentielles dans le développement d'applications, où il faut être 
+                    minutieux, structurer son raisonnement et résoudre des problèmes de manière 
+                    logique et efficace.</p>
+            </div>
+        </section>
+    </div>
 
     <section class="dev">
         <h2>Pourquoi le développement d'applications ? 💻</h2>
@@ -123,7 +125,35 @@
         </div>
     </footer>
    
-  
+    <button id="scrollToTop" class="computer-button">
+        <div class="screen">
+            <div class="content">⌂</div>
+        </div>
+        <div class="base"></div>
+    </button>
+    <div class="scroll-text">Haut de page</div>
+
+    <script>
+        const scrollToTopButton = document.getElementById('scrollToTop');
+        
+        // Afficher/masquer le bouton en fonction du défilement
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                scrollToTopButton.style.display = 'flex';
+            } else {
+                scrollToTopButton.style.display = 'none';
+            }
+        });
+
+        // Défilement vers le haut au clic
+        scrollToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+
 </body>
 </html> 
     

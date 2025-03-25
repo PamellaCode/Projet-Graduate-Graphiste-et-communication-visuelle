@@ -85,5 +85,34 @@
         </div>
     </footer>
 
+    <button id="scrollToTop" class="computer-button">
+        <div class="screen">
+            <div class="content">⌂</div>
+        </div>
+        <div class="base"></div>
+    </button>
+    <div class="scroll-text">Haut de page</div>
+
+    <script>
+        const scrollToTopButton = document.getElementById('scrollToTop');
+        
+        // Afficher/masquer le bouton en fonction du défilement
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                scrollToTopButton.style.display = 'flex';
+            } else {
+                scrollToTopButton.style.display = 'none';
+            }
+        });
+
+        // Défilement vers le haut au clic
+        scrollToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+
 </body>
 </html> 
