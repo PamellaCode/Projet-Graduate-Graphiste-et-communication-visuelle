@@ -18,9 +18,9 @@
     <section class="top-page3">
         <header>
             <nav class="nav">
-                <li><a href="./index.html">Accueil</a></li>
-                <li><a href="./Qui_suis_je.html">Qui suis-je ?</a></li>
+                <li><a href="./index.html">Accueil</a></li>   
                 <li><a href="./Mon_parcours.html">Parcours</a></li>
+                <li><a href="./Qui_suis_je.html">Qui suis-je ?</a></li>
                 <li><a href="./Contact.html">Contact</a></li>
             </nav>
             <h1 class="big-title"><i class="fas fa-code"></i> Voici mon chemin atypique !</h1>   
@@ -30,25 +30,65 @@
     
     <section class="dev">
         <div class="dev">
-            <h2><i class="fas fa-laptop-code"></i> Mes compétences</h2>
-            <li><i class="fas fa-code"></i> <strong>Développement Web : </strong> HTML, CSS, PHP</li>
-            <li><i class="fas fa-terminal"></i> <strong>Éditeur de Code : </strong> Visual Studio Code</li>
-            <li><i class="fas fa-graduation-cap"></i> <strong>Apprentissage en autodidacte : </strong> Suivi de formations en ligne sur OpenClassrooms et Skilleos</li>
-            <li><i class="fas fa-brain"></i> <strong>Soft Skills : </strong> Autonomie, organisation, polyvalence, esprit logique, capacité d'apprentissage rapide</li>
-            <li><i class="fas fa-briefcase"></i> <strong>Expérience professionnelle : </strong> Adaptabilité, rigueur, travail en équipe</li> 
-            <br>
-            <p>
-                <i class="fas fa-rocket"></i> <strong>Auto-formation en développement web (En cours)</strong>
-                <li><i class="fas fa-book"></i> Cours suivis sur OpenClassrooms, Skilleos et YouTube</li>
-                <li><i class="fas fa-html5"></i> Création d'un site avec HTML et CSS</li>
-                <li><i class="fas fa-envelope"></i> Intégration d'un formulaire de contact avec PHPMailer</li>
-                <li><i class="fas fa-map-marker-alt"></i> Intégration de cartes Google Maps</li>
-                <li><i class="fas fa-calendar-alt"></i> Semaine de découverte des Métiers du Numérique Social Builder – Janvier 2025</li>
-            </p>
-        </div>
-        
-        <div class="image1">
-            <img src="./Image dev/pexels-pixabay-270632 (2).jpg" alt="">
+            <h2>💻 Mes compétences</h2>
+            <div class="dev-content">
+                <div class="column">
+                    <p>
+                        <strong>Développement Web :</strong><br>
+                        🖥️ HTML, CSS, PHP, JavaScript, TypeScript, React, Vite, Tailwind CSS
+                    </p>
+
+                    <p>
+                        <strong>Outils et Éditeurs de Code :</strong><br>
+                        🛠️ Visual Studio Code, 🧠 Cursor (éditeur IA), 🗄️ Supabase, ⚙️ n8n (automatisation de workflows)
+                    </p>
+
+                    <p>
+                        <strong>Apprentissage en autodidacte :</strong><br>
+                        📚 Formations en ligne sur OpenClassrooms, Skilleos, YouTube, 🎨 Lovable (design et outils no-code/low-code)<br>
+                        Mise en pratique à travers des projets concrets (site web, automatisation de tâches, SaaS)
+                    </p>
+                    <div class="image1">
+                        <img src="./Image dev/pexels-pixabay-270632 (2).jpg" alt="">
+                    </div>
+                </div>
+                <div class="column">
+                    <p>
+                        <strong>Projets réalisés / expériences pratiques :</strong><br>
+                        <br>
+                        <strong>ArgusAI (Stage)</strong> – Participation à la création d'une application SaaS visant à estimer la valeur de véhicules avec l'IA<br>
+                        • Contribution au workflow automatisé via n8n (webhook, GPT-4o, extraction API, filtrage, scraping)<br>
+                        • Développement de composants d'interface avec React, Tailwind CSS et TypeScript<br>
+                        • Projet repris ensuite par l'entreprise pour finalisation<br>
+                        <br>
+                        <strong>Workflow de newsletter automatisé</strong> avec n8n : collecte d'e-mails, enregistrement en base de données, envoi automatique de newsletters
+                    </p>
+
+                    <p>
+                        <strong>Soft Skills :</strong><br>
+                        🧠 Autonomie, organisation, polyvalence, esprit logique, adaptabilité, rigueur, travail en équipe, capacité d'apprentissage rapide
+                    </p>
+
+                    <p>
+                        <strong>🎓 Parcours de formation</strong><br>
+                        <strong>Auto-formation en développement web (en cours)</strong><br>
+                        <br>
+                        <strong>Plateformes :</strong> OpenClassrooms, Skilleos, YouTube, 🎨 Lovable<br>
+                        <br>
+                        <strong>Réalisations :</strong><br>
+                        • Création de sites avec HTML et CSS<br>
+                        • Intégration de formulaires de contact avec PHPMailer<br>
+                        • Ajout de cartes Google Maps<br>
+                        • Automatisations avec n8n pour des cas concrets<br>
+                        <br>
+                        <strong>Certifications :</strong><br>
+                        📜 Google AI Essentials (2025) – Fondamentaux de l'intelligence artificielle appliquée aux projets professionnels<br>
+                        <br>
+                        <strong>Semaine de découverte des Métiers du Numérique</strong><br>
+                        Social Builder – Janvier 2025
+                    </p>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -86,7 +126,6 @@
         </div>
         <div class="base"></div>
     </button>
-    <div class="scroll-text">Haut de page</div>
 
     <script>
         const scrollToTopButton = document.getElementById('scrollToTop');
