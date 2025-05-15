@@ -7,28 +7,53 @@
     <link rel="stylesheet" href="Css/styles.css">
     <link rel="stylesheet" href="Css/styles_parcours.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap" rel="stylesheet">
+    <style>
+        @font-face {
+            font-family: 'Sour Gummy';
+            src: url('./sour_gummy/Sour Gummy.ttf') format('truetype');
+        }
+        .color-code {
+            display: inline-block;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: monospace;
+            font-weight: 500;
+            color: #333;
+            margin: 0 2px;
+        }
+    </style>
 </head>
 
 <body>
-    <div class="floating-element"></div>
-    <div class="floating-element"></div>
-    <div class="floating-element"></div>
-    <div class="floating-element"></div>
-    
-    <section class="top-page3">
-        <header>
+    <header class="main-header">
+        <div class="header-content">
+            <div class="logo">Pamella Defrend</div>
             <nav class="nav">
-                <li><a href="./index.html">Accueil</a></li>   
+                <li><a href="./index.html">Accueil</a></li>
                 <li><a href="./Mon_parcours.html">Parcours</a></li>
                 <li><a href="./Qui_suis_je.html">Qui suis-je ?</a></li>
                 <li><a href="./Contact.html">Contact</a></li>
             </nav>
-            <h1 class="big-title"><i class="fas fa-code"></i> Voici mon chemin atypique !</h1>   
-        </header>        
-    </section>
+        </div>
+    </header>
 
+    <div style="display: flex; justify-content: center; align-items: center; min-height: 50px;">
+        <h1 class="big-title">Voici mon chemin atypique !</h1>
+    </div>
+
+    <!-- Système de filtre type "pills" -->
+    <div class="filter-menu">
+        <button class="filter-btn active" data-filter="all">Tous</button>
+        <button class="filter-btn" data-filter="dev">Mes compétences</button>
+        <button class="filter-btn" data-filter="projet">Réalisations</button>
+        <button class="filter-btn" data-filter="formation">Formation</button>
+        <button class="filter-btn" data-filter="experiencepro">Expérience professionnelle</button>
+        <button class="filter-btn" data-filter="certification">Certification</button>
+        <button class="filter-btn" data-filter="recommandation">Recommandation</button>
+    </div>
     
-    <section class="dev">
+    <section class="dev filtrable-section" data-category="dev">
         <div class="dev">
             <h2>💻 Mes compétences</h2>
             <div class="dev-content">
@@ -48,9 +73,18 @@
                         📚 Formations en ligne sur OpenClassrooms, Skilleos, YouTube, 🎨 Lovable (design et outils no-code/low-code)<br>
                         Mise en pratique à travers des projets concrets (site web, automatisation de tâches, SaaS)
                     </p>
-                    <div class="image1">
-                        <img src="./Image dev/pexels-pixabay-270632 (2).jpg" alt="">
-                    </div>
+                     <p>
+                        <strong>Soft Skills :</strong><br>
+                        🧠 Autonomie, organisation, polyvalence, esprit logique, adaptabilité, rigueur, travail en équipe, capacité d'apprentissage rapide
+                    </p>
+                    <p>
+                    <strong>Certifications :</strong><br>
+                        📜 Google AI Essentials (2025) – Fondamentaux de l'intelligence artificielle appliquée aux projets professionnels<br>
+                        <br>
+                        <strong>Semaine de découverte des Métiers du Numérique</strong><br>
+                        Social Builder – Janvier 2025
+                    </p>
+                    
                 </div>
                 <div class="column">
                     <p>
@@ -64,67 +98,206 @@
                         <strong>Workflow de newsletter automatisé</strong> avec n8n : collecte d'e-mails, enregistrement en base de données, envoi automatique de newsletters
                     </p>
 
-                    <p>
-                        <strong>Soft Skills :</strong><br>
-                        🧠 Autonomie, organisation, polyvalence, esprit logique, adaptabilité, rigueur, travail en équipe, capacité d'apprentissage rapide
-                    </p>
+                   
 
                     <p>
-                        <strong>🎓 Parcours de formation</strong><br>
-                        <strong>Auto-formation en développement web (en cours)</strong><br>
-                        <br>
-                        <strong>Plateformes :</strong> OpenClassrooms, Skilleos, YouTube, 🎨 Lovable<br>
-                        <br>
                         <strong>Réalisations :</strong><br>
                         • Création de sites avec HTML et CSS<br>
                         • Intégration de formulaires de contact avec PHPMailer<br>
                         • Ajout de cartes Google Maps<br>
                         • Automatisations avec n8n pour des cas concrets<br>
-                        <br>
-                        <strong>Certifications :</strong><br>
-                        📜 Google AI Essentials (2025) – Fondamentaux de l'intelligence artificielle appliquée aux projets professionnels<br>
-                        <br>
-                        <strong>Semaine de découverte des Métiers du Numérique</strong><br>
-                        Social Builder – Janvier 2025
-                    </p>
+                        <br> </p>
+                        <div class="image1">
+                        <img src="./Image dev/pexels-pixabay-270632 (2).jpg" alt="">
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="projet">
-        <div class="image2">
-            <img src ="./Image dev/pexels-markus-winkler-1430818-30885764 (2).jpg" alt="">
-        </div> 
-
-        <div class="text">
-            <h2><i class="fas fa-project-diagram"></i> Projet à venir</h2>
-            <p class="paragraphe">
-                <li><i class="fas fa-tasks"></i> Projet à venir 1</li>
-                <li><i class="fas fa-tasks"></i> Projet à venir 2</li>
-            </p>
-        </div> 
+    <section class="projet filtrable-section" data-category="projet">
+        <div class="projet-box" style="background:rgba(255,255,255,0.95);border-radius:15px;box-shadow:0 5px 15px rgba(0,0,0,0.05);backdrop-filter:blur(10px);padding:30px;margin:0 auto;width:95%;">
+            <h2 class="section-title">Réalisations</h2>
+            <div class="miniatures-projets" style="display:flex;flex-direction:column;align-items:center;gap:40px;margin-top:30px;">
+                <div style="display:flex;flex-direction:row;justify-content:center;gap:40px;flex-wrap:wrap;width:100%;">
+                    <div style="display:flex;flex-direction:column;align-items:center;max-width:450px;">
+                        <a href="https://pamellacode.github.io/Le-Parc-des-Loulous/" target="_blank" rel="noopener noreferrer" class="miniature-projet" style="text-align:center;text-decoration:none;color:inherit;">
+                            <img src="./Image dev/Le_parc_des_loulous.png" alt="Le Parc des Loulous" style="width:260px;height:180px;object-fit:cover;border-radius:15px;box-shadow:0 2px 8px rgba(0,0,0,0.12);transition:transform 0.2s;">
+                            <div style="margin-top:12px;font-weight:500;font-size:1.1em;">Le Parc des Loulous <br> Site fictif</div>
+                        </a>
+                        <div style="margin-top:18px;text-align:left;font-size:0.98em;line-height:1.6;background:rgba(255,255,255,0.85);border-radius:12px;padding:18px 14px;box-shadow:0 2px 8px rgba(0,0,0,0.06);">
+🐶 <b>Le Parc des Loulous — Synthèse du Design Web</b><br>
+🎨 <b>Identité visuelle & palette</b><br>
+Le site repose sur une palette chaleureuse et naturelle, en parfaite harmonie avec l'univers canin :<br><br>
+Orange saumon <span class="color-code" style="background-color: #F4A460;">#F4A460</span> (couleur du Shiba Inu) : couleur principale, utilisée pour les boutons, liens et accents visuels<br>
+Beige clair <span class="color-code" style="background-color: #E8D5C4;">#E8D5C4</span> : ton doux et enveloppant, évoquant le confort<br>
+Marron foncé <span class="color-code" style="background-color: #8B4513;">#8B4513</span> : couleur d'accent pour le footer et les titres<br>
+Gris foncé <span class="color-code" style="background-color: #4A4A4A;">#4A4A4A</span> : couleur de texte pour une excellente lisibilité<br>
+Fond crème <span class="color-code" style="background-color: #F5F5F0;">#F5F5F0</span> et blanc : pour une base lumineuse et reposante<br><br>
+💡 Des motifs de pattes discrets et transparents renforcent l'identité visuelle avec subtilité.<br><br>
+🧭 <b>UX / UI</b><br>
+Navigation claire, header fixe avec ombre légère (shadow-lg)<br>
+Footer contrasté avec texte blanc et liens beiges, pour une bonne hiérarchie<br>
+Boutons arrondis (rounded-full), animés au survol avec effet de scale et transitions douces<br>
+Composants interactifs : cartes avec ombres et animation au survol (hover:shadow-xl + transform)<br><br>
+🌟 <b>Ambiance & typographie</b><br>
+L'ambiance générale est professionnelle, accueillante et douce, pensée pour inspirer confiance :<br>
+Tons chauds et naturels pour évoquer bien-être et proximité<br>
+Typographie système sobre et lisible<br>
+Titres en gras, bien dimensionnés (text-4xl à text-2xl) pour structurer visuellement chaque section<br>
+Hiérarchie claire, interlignage fluide et mise en page aérée<br><br>
+📣 <b>Message visuel</b><br>
+Le site reflète les valeurs de l'établissement :<br>
+Bienveillance, sécurité, proximité avec les animaux<br>
+Mise en avant des services dans un cadre chaleureux et structuré<br>
+Interface pensée pour rassurer les clients tout en valorisant les prestations proposées<br><br>
+✅ <b>Points forts</b><br>
+Palette cohérente et ancrée dans l'univers canin<br>
+Design responsive, performant et intuitif<br>
+Transitions douces, animations légères et micro-interactions bien dosées<br>
+Équilibre parfait entre esthétique, clarté et convivialité
+                        </div>
+                    </div>
+                    <div style="display:flex;flex-direction:column;align-items:center;max-width:450px;">
+                        <a href="https://pamellacode.github.io/Le-gout-des-volcans/" target="_blank" rel="noopener noreferrer" class="miniature-projet" style="text-align:center;text-decoration:none;color:inherit;">
+                            <img src="./Image dev/Le_gout_des_volcans.png" alt="Le Goût des Volcans" style="width:260px;height:180px;object-fit:cover;border-radius:15px;box-shadow:0 2px 8px rgba(0,0,0,0.12);transition:transform 0.2s;">
+                            <div style="margin-top:12px;font-weight:500;font-size:1.1em;">Le Goût des Volcans <br> Site fictif</div>
+                        </a>
+                        <div style="margin-top:18px;text-align:left;font-size:0.98em;line-height:1.6;background:rgba(255,255,255,0.85);border-radius:12px;padding:18px 14px;box-shadow:0 2px 8px rgba(0,0,0,0.06);">
+🍽️ <b>Le Goût des Volcans — Synthèse du Design Web</b><br>
+🎨 <b>Identité visuelle & palette chromatique</b><br>
+L'univers visuel du site repose sur une palette douce et organique, évoquant la nature, le terroir et la cuisine locale :<br><br>
+Vert mousse (<span class="color-code" style="background-color: #8F9779;">#8F9779</span>) : couleur apaisante et naturelle, utilisée pour le header et le footer<br>
+Terracotta (<span class="color-code" style="background-color: #E2725B;">#E2725B</span>) : ton chaleureux de terre cuite, appliqué aux boutons et aux éléments interactifs<br>
+Crème clair (<span class="color-code" style="background-color: #F5F5DC;">#F5F5DC</span>) : fond principal du site, pour une lisibilité douce et élégante<br><br>
+💡 Utilisation subtile d'overlays sombres (30 à 50% d'opacité) sur les images hero pour renforcer l'immersion.<br><br>
+🧭 <b>UX / UI</b><br>
+Navigation claire et fixe, avec un header contrasté et des effets de survol bien visibles<br>
+Design responsive, compatible tous supports<br>
+Composants réutilisables et structure modulaire (grilles, cartes, sections alternées)<br>
+Transitions douces, hover fluides, ombres légères pour une expérience utilisateur agréable et moderne<br><br>
+🌟 <b>Ambiance & typographie</b><br>
+L'ambiance générale est chaleureuse, contemporaine et raffinée, à l'image de la cuisine du restaurant :<br>
+Dancing Script pour les titres : touche artisanale et authentique<br>
+Montserrat pour la navigation et le corps de texte : lisibilité et modernité<br>
+Cormorant Garamond pour les prix et descriptions : élégance classique et gourmet<br><br>
+📣 <b>Message visuel</b><br>
+Le site valorise :<br>
+Une cuisine locale, bio et de saison<br>
+Un lieu accueillant, raffiné et ancré dans son terroir<br>
+Une interface qui met l'accent sur la sobriété, la qualité et la transparence<br><br>
+✅ <b>Points forts</b><br>
+Cohérence visuelle sur l'ensemble du site<br>
+Palette harmonieuse et différenciante, en lien direct avec l'identité du restaurant<br>
+Navigation intuitive et expérience utilisateur soignée<br>
+Design à la fois esthétique et performant, adapté aux standards actuels du web
+                        </div>
+                    </div>
+                </div>
+                <div style="display:flex;flex-direction:column;align-items:center;max-width:450px;margin-top:20px;">
+                    <a href="https://pamellacode.github.io/Argus-IA/" target="_blank" rel="noopener noreferrer" class="miniature-projet" style="text-align:center;text-decoration:none;color:inherit;">
+                        <img src="./Icone/Assistant IA.png" alt="Argus AI" style="width:260px;height:180px;object-fit:cover;border-radius:15px;box-shadow:0 2px 8px rgba(0,0,0,0.12);transition:transform 0.2s;">
+                        <div style="margin-top:12px;font-weight:500;font-size:1.1em;">Argus IA</div>
+                    </a>
+                    <div style="margin-top:18px;text-align:left;font-size:0.98em;line-height:1.6;background:rgba(255,255,255,0.85);border-radius:12px;padding:18px 14px;box-shadow:0 2px 8px rgba(0,0,0,0.06);">
+🤖 <b>ArgusAI — Synthèse du Design Web</b><br>
+🎨 <b>Identité visuelle & palette</b><br>
+ArgusAI adopte une esthétique moderne et technologique, soutenue par une palette dynamique :<br><br>
+Fond général : blanc, pour une interface lumineuse et lisible<br>
+Dégradés bleu-vert : utilisés pour les titres, icônes et arrière-plans d'éléments clés<br>
+Bleu foncé : couleur dominante de la sidebar du dashboard<br>
+Bleu clair : pour les boutons principaux, arrondis et animés au survol<br>
+Couleurs harmonieuses : évoquant la fiabilité, l'innovation et la clarté<br><br>
+💡 L'association des tons froids et des dégradés donne à l'application une identité technologique, accessible et professionnelle.<br><br>
+🧭 <b>UX / UI</b><br>
+Navigation fluide et claire :<br>
+Menu principal avec authentification sécurisée<br>
+Sidebar latérale intuitive dans le dashboard<br><br>Pages clés :<br>
+Page d'accueil avec CTA clair, section explicative et chatbot intégré<br>
+Dashboard utilisateur à onglets (estimations, abonnements, historique)<br><br>Design responsive :<br>
+Adapté à tous les écrans<br>
+Transitions douces, toasts de notifications, effets de survol<br><br>Composants UI réutilisables :<br>
+Organisation modulaire, architecture bien structurée<br><br>🌟 <b>Ambiance générale</b><br>
+Style moderne, high-tech et accessible<br>
+Interface épurée et bien aérée<br>
+Ambiance rassurante, inspirant la fiabilité (essentiel pour un outil d'estimation)<br>
+Visuels sobres, animations légères, aucune surcharge graphique<br><br>📣 <b>Message visuel</b><br>
+Le message porté par ArgusAI est clair :<br>
+Offrir une solution nouvelle génération pour estimer la valeur d'un véhicule<br>
+Mettre en avant la puissance de l'IA au service de la transparence automobile<br>
+Créer un outil à la fois utile, ergonomique et intelligent<br><br>✅ Mise en confiance assurée grâce à :<br>
+Interface claire et lisible<br>
+Statistiques et historiques visuellement accessibles<br>
+Présentation claire des offres et des fonctionnalités<br>
+Optimisation SEO professionnelle pour une visibilité renforcée<br><br>✅ <b>Points forts</b><br>
+Palette cohérente et technologique<br>
+UX optimisée : navigation intuitive, dashboard fonctionnel<br>
+Composants modulaires : maintenance et évolutivité facilitées<br>
+Accessibilité & performance : chargement différé, responsive design<br>
+SEO avancé : métadonnées, Open Graph, structured data<br>
+Vitrine complète de compétences en développement fullstack, UI/UX, IA et automatisation <br><br>
+* Toutes les informations concernant les avis, l'équipe, et l'entreprise sont présente à titre d'exemple et seront à modifié par l'entreprise à l'initiative de ce projet.
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section class="formation">
-        <img src="./Image dev/Formations.png" alt=""> 
+    <section class="formation filtrable-section" data-category="formation">
+        <div class="formation-box" style="background:rgba(255,255,255,0.95);border-radius:15px;box-shadow:0 5px 15px rgba(0,0,0,0.05);backdrop-filter:blur(10px);padding:30px;margin:0 auto;width:95%;display:flex;flex-direction:column;align-items:center;">
+            <h2 class="section-title">Formation</h2>
+            <img src="./Image dev/Formations.png" alt=""> 
+        </div>
     </section>
-    <section class="experiencepro">
-        <img src="./Image dev/Experience_pro.png" alt="">
+    <section class="experiencepro filtrable-section" data-category="experiencepro">
+        <div class="experiencepro-box" style="background:rgba(255,255,255,0.95);border-radius:15px;box-shadow:0 5px 15px rgba(0,0,0,0.05);backdrop-filter:blur(10px);padding:30px;margin:0 auto;width:95%;display:flex;flex-direction:column;align-items:center;">
+            <h2 class="section-title">Expérience professionnelle</h2>
+            <img src="./Image dev/Experience_pro.png" alt="">
+        </div>
+    </section>
+    <section class="certification filtrable-section" data-category="certification" style="margin-top:40px;width:90%;max-width:1400px;font-weight:350;padding:40px;display:flex;flex-direction:column;background:linear-gradient(135deg,#B2FEFA,#00c6ff);border-radius:20px;box-shadow:0 10px 30px rgba(0,0,0,0.1);transition:transform 0.3s ease,box-shadow 0.3s ease;margin-left:auto;margin-right:auto;">
+        <div class="certification-box" style="background:rgba(255,255,255,0.95);border-radius:15px;box-shadow:0 5px 15px rgba(0,0,0,0.05);backdrop-filter:blur(10px);padding:30px;margin:0 auto;width:95%;display:flex;flex-direction:column;align-items:center;">
+            <h2 class="section-title">Certification</h2>
+            <img src="./Image dev/certifcation_ia.png" alt="Certification Google AI Essentials" style="max-width:500px;width:100%;height:auto;margin:30px auto 0 auto;box-shadow:0 2px 8px rgba(0,0,0,0.10);border-radius:10px;">
+            <!-- Ajoute ici le contenu de ta certification -->
+        </div>
+    </section>
+    <section class="recommandation filtrable-section" data-category="recommandation" style="margin-top:40px;width:90%;max-width:1400px;font-weight:350;padding:40px;display:flex;flex-direction:column;background:linear-gradient(135deg,#B2FEFA,#00c6ff);border-radius:20px;box-shadow:0 10px 30px rgba(0,0,0,0.1);transition:transform 0.3s ease,box-shadow 0.3s ease;margin-left:auto;margin-right:auto;">
+        <div class="recommandation-box" style="background:rgba(255,255,255,0.95);border-radius:15px;box-shadow:0 5px 15px rgba(0,0,0,0.05);backdrop-filter:blur(10px);padding:30px;margin:0 auto;width:95%;display:flex;flex-direction:column;align-items:center;">
+            <h2 class="section-title">Recommandation</h2>
+            <embed src="./Icone/Lettre de recommandation pour Pamella Defrend.pdf" type="application/pdf" style="width:100%;max-width:800px;height:600px;margin:30px auto 0 auto;box-shadow:0 2px 8px rgba(0,0,0,0.10);border-radius:10px;">
+        </div>
     </section>
 
     <footer class="footer">
-        <div class="social-icons">
-            <a href="https://github.com/PamellaCode" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/pamella-defrend-739a81355" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3 class="footer-name">Pamella Defrend</h3>
+                <p> Future Graphiste & Designer Visuelle</p>
+            </div>
+
+            <div class="footer-section">
+                <nav class="footer-nav">
+                    <ul>
+                        <li><a href="./index.html">Accueil</a></li>
+                        <li><a href="./Mon_parcours.html">Parcours</a></li>
+                        <li><a href="./Qui_suis_je.html">Qui suis-je ?</a></li>
+                        <li><a href="./Contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="footer-section">
+                <h3>Mes coordonnées</h3>
+                <p><a href="mailto:defrendpamella@gmail.com">defrendpamella@gmail.com</a></p>
+                <p><a href="tel:0752763066">07.45.58.86.35</a></p>
+                <p class="footer-tagline">📶 Connectée, motivée, opérationnelle : je suis prête pour la formation et un stage en télétravail.</p>
+            </div>
         </div>
     </footer>
 
-    <button id="scrollToTop" class="computer-button">
-        <div class="screen">
-            <div class="content">⌂</div>
-        </div>
-        <div class="base"></div>
+    <button id="scrollToTop" class="scrolltop-palette">
+        <img src="Icone/palette-bouton.png" alt="Retour en haut" />
     </button>
 
     <script>
@@ -144,6 +317,25 @@
             window.scrollTo({
                 top: 0,
                 behavior: 'smooth'
+            });
+        });
+
+        // Nouveau système de filtrage type "pills"
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const sections = document.querySelectorAll('.filtrable-section');
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+                const filter = button.getAttribute('data-filter');
+                sections.forEach(section => {
+                    if (filter === 'all' || section.getAttribute('data-category') === filter) {
+                        section.style.display = '';
+                    } else {
+                        section.style.display = 'none';
+                    }
+                });
             });
         });
     </script>

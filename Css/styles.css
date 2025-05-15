@@ -4,30 +4,89 @@
 
 *{
     font-family:'Open Sans';
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
+/* Header principal */
+.main-header {
+    background: url("../Arrière_plan_haut/pexels-padrinan-255377.jpg");
+    background-size: cover;
+    background-position: center;
+    padding: 30px 50px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    height: 120px;
+}
 
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
+    height: 100%;
+}
 
-/* En-tête*/
-
-.big-title {
-color: white;
-font-size: 80px;
-font-family: 'Sour Gummy', cursive ;
-font-weight: 100;
-padding: 5px 50px;
-text-align: center;
+.logo {
+    font-size: 32px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
 }
 
 /* Menu de navigation */
-
 nav.nav {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     list-style: none;
-    width: 400px;
-    margin-left: 30px;
+    gap: 40px;
+}
+
+nav.nav a {
     color: white;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 20px;
+    transition: color 0.3s ease;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+nav.nav a:hover {
+    color: #B2FEFA;
+}
+
+/* Ajustement pour la section top-page1 */
+.top-page1 {
+    margin-top: 120px;
+}
+
+/* Ajustement pour la première section après le header */
+.nom {
+    margin-top: 120px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.title-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* En-tête*/
+.big-title {
+    color: white;
+    font-size: 80px;
+    font-family: 'Sour Gummy', cursive;
+    font-weight: 100;
+    text-align: center;
 }
 
 h2 {
@@ -135,5 +194,43 @@ footer.footer {
     }
     .social-icons a {
         font-size: 1em;
+    }
+}
+
+/* Nouveau style du bouton palette de peinture */
+.scrolltop-palette {
+    position: fixed;
+    bottom: 100px;
+    right: 50px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1000;
+    padding: 0;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.scrolltop-palette img {
+    width: 44px;
+    height: 44px;
+    display: block;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+    transition: transform 0.3s, box-shadow 0.3s;
+    object-fit: contain;
+    background: none;
+    border-radius: 0;
+    padding: 0;
+}
+.scrolltop-palette:hover img {
+    transform: rotate(-15deg) scale(1.08);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+}
+@media (max-width: 768px) {
+    .scrolltop-palette {
+        bottom: 70px;
+        right: 20px;
+    }
+    .scrolltop-palette img {
+        width: 32px;
+        height: 32px;
     }
 }

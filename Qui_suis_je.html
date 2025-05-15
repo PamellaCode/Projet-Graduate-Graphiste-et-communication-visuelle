@@ -9,79 +9,116 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
-    <section class="top-page2">
-        <header>
+    <header class="main-header">
+        <div class="header-content">
+            <div class="logo">Pamella Defrend</div>
             <nav class="nav">
                 <li><a href="./index.html">Accueil</a></li>
                 <li><a href="./Mon_parcours.html">Parcours</a></li>
                 <li><a href="./Qui_suis_je.html">Qui suis-je ?</a></li>
                 <li><a href="./Contact.html">Contact</a></li>
             </nav>
-            <h1 class="big-title">Laissez-moi me présenter !</h1> 
-        </header>        
-    </section>
-
-    <section class="body">
-         <section class="tribu">
-        <div class="titre_tribu">
-            <h2>Une passion pour les animaux 🐾</h2>
-            <p>Depuis toujours, les animaux occupent une place essentielle dans ma vie. 
-                Prendre soin de mes propres compagnons, chiens et chats, m'a appris la patience, 
-                l'adaptabilité et le sens des responsabilités. J'ai également eu des NAC, ce qui 
-                m'a permis de mieux comprendre les besoins variés des animaux. En parallèle, je 
-                propose des services de petsitting pendant les vacances, une expérience qui demande 
-                organisation, réactivité et autonomie, des qualités également essentielles dans le métier 
-                de Développeur web, où la gestion des priorités et l'adaptabilité 
-                sont primordiales pour mener à bien un projet.</p>
         </div>
-        <div class="images_tribu">
-            <img src="./Passion/La_tribu.png" alt="Photos de mes différents animaux">
+    </header>
+
+    <section class="presentation">
+        <div class="presentation-container">
+            <h1>Laissez-moi me présenter !</h1>
+            <div class="presentation-content">
+                <div class="presentation-image">
+                    <img src="./Icone/IMG_20250324_1312353.JPG" alt="Photo de présentation">
+                </div>
+                <div class="presentation-text">
+                    <p>🎨 Changer de cap, c'est redessiner les contours de son avenir.
+                        Après un premier parcours professionnel bien rempli, j'ai ressenti le besoin de me reconnecter 
+                        à ce qui m'anime profondément : créer, observer, imaginer, comprendre… et apprendre sans fin. 
+                        C'est ainsi que j'ai découvert le graphisme et la communication visuelle, un univers où les idées 
+                        prennent forme et où chaque détail a le pouvoir de transmettre une émotion.
+                        
+                        Aujourd'hui, je me forme au métier de graphiste multimédia à travers une formation diplômante avec 
+                        Studi. Une aventure à la fois technique et artistique, qui me permet de développer une vraie 
+                        expertise en design graphique, création d'identités visuelles, outils de création (Adobe, Figma, etc.), 
+                        et conception de supports de communication. Mon objectif ? Mettre ces compétences au service de projets 
+                        concrets, porteurs de sens.</p>
+                </div>
+            </div>
         </div>
     </section>
 
-    <section class="asso">
-        <h2>Mon engagement bénévole pour la cause animale</h2>
-        <p>Offrir du temps et du soutien à une cause qui me tient à cœur est une expérience
-             enrichissante. Prendre soin des animaux, assurer leur bien-être et répondre à 
-             leurs besoins spécifiques demandent rigueur, patience et une grande capacité 
-             d'adaptation. Cet engagement reflète ma persévérance et mon sens des responsabilités, 
-             des valeurs essentielles également dans la gestion de projets en développement web, 
-             où il faut s'investir pleinement, collaborer efficacement et trouver des solutions adaptées aux 
-             besoins des utilisateurs.</p>
+    <!-- Système de filtre type "pills" -->
+    <div class="filter-menu">
+        <button class="filter-btn active" data-filter="all">Tous</button>
+        <button class="filter-btn" data-filter="animaux">Animaux</button>
+        <button class="filter-btn" data-filter="associations">Associations</button>
+        <button class="filter-btn" data-filter="voyages">Voyages</button>
+        <button class="filter-btn" data-filter="lecture">Lecture</button>
+    </div>
+
+    <section class="body filtrable-section" data-category="animaux">
+        <section class="tribu">
+            <div class="encadre-tribu" style="background:rgba(255,255,255,0.08);border-radius:25px;box-shadow:0 5px 15px rgba(0,0,0,0.08);padding:40px 30px;max-width:900px;margin:40px auto 0 auto;display:flex;flex-direction:column;align-items:center;">
+                <div class="titre_tribu" style="border:none;">
+                    <h2>Une passion pour les animaux </h2>
+                    <p>Depuis toujours, les animaux font partie de mon quotidien. Prendre soin de mes chiens, 
+                        chats et NAC m'a appris la patience, la responsabilité et l'écoute des besoins — des qualités 
+                        essentielles dans le graphisme, où chaque projet demande de comprendre son public, son message
+                        et son contexte.
+
+                        En parallèle, je propose régulièrement des services de petsitting. Organisation, autonomie, 
+                        fiabilité… autant de compétences transférables dans la gestion de projets visuels, la relation 
+                        client ou la création de supports adaptés à des demandes spécifiques.</p>
+                </div>
+                <img src="./Passion/La_tribu.png" alt="Photos de mes différents animaux">
+            </div>
+        </section>
     </section>
 
+    <section class="asso filtrable-section" data-category="associations">
+        <div class="encadre-asso" style="background:rgba(255,255,255,0.08);border-radius:25px;box-shadow:0 5px 15px rgba(0,0,0,0.08);padding:40px 30px;max-width:900px;margin:40px auto 0 auto;display:flex;flex-direction:column;align-items:center;">
+            <h2>Mon engagement bénévole pour la cause animale</h2>
+            <p>Je suis également investie bénévolement auprès d'associations de protection animale. C'est un engagement 
+                de cœur, mais aussi un excellent terrain d'apprentissage : rigueur, sens de l'observation, capacité à 
+                anticiper et à s'adapter.
 
-    <section class="Voyages">
-        <div class="titre_voyage">
-            <h2>Voyager pour s'inspirer</h2>
-            <p>J'aime explorer la France et découvrir de nouveaux horizons.
-                Chaque voyage est une opportunité d’apprendre, de m’adapter à différents environnements 
-                et de stimuler ma curiosité. Ces expériences enrichissent ma créativité et mon sens de 
-                l’observation — des qualités essentielles pour un développeur web. Elles m’aident à 
-                concevoir des interfaces intuitives, à comprendre les besoins variés des utilisateurs 
-                et à développer des solutions web adaptées à des contextes divers et évolutifs.</p>
-         </div>
-             <div class="images_voyages">
+                Ce même état d'esprit guide ma démarche en design : être à l'écoute, m'adapter aux besoins réels, 
+                trouver des solutions visuelles justes et impactantes.
+                
+                </p>
+        </div>
+    </section>
+
+    <section class="Voyages filtrable-section" data-category="voyages">
+        <div class="encadre-voyages" style="background:rgba(255,255,255,0.08);border-radius:25px;box-shadow:0 5px 15px rgba(0,0,0,0.08);padding:40px 30px;max-width:1200px;margin:40px auto 0 auto;display:flex;flex-direction:column;align-items:center;">
+            <div class="titre_voyage">
+                <h2>Voyager pour nourrir l'oeil</h2>
+                <p>J'adore explorer la France et changer de décor. Chaque ville, chaque paysage, chaque atmosphère 
+                    devient source d'inspiration : couleurs, textures, ambiances… Les voyages enrichissent ma sensibilité 
+                    graphique et ma capacité à capter les détails qui font la différence dans une composition.
+
+                    Ils m'aident à garder un regard neuf, à comprendre la diversité des publics, et à m'adapter à différents 
+                    contextes culturels — une qualité précieuse pour créer des visuels inclusifs, efficaces et pertinents.</p>
+            </div>
+            <div class="images_voyages">
                 <img src="./Passion/Foret_auvergne.jpg" alt="">
-             <div class="images_voyagees">
+                <div class="images_voyagees">
                     <img src="./Passion/Mer_mallorca.png" alt="Plusieurs paysages de mes voyages en France">
                     <img src="./Passion/Shiba_inu_a_la_plage.png" alt="">
-             </div>
-             </div>
-
-        <div class="images_voyagees2">
-            <img src="./Passion/Lac_Auvergne.jpg" alt="">
-            <img src="./Passion/Shiba_inu_mer.jpg" alt="">
-        </div>
-        <div class="images_voyages2">    
-          <img src="./Passion/Montagne.jpg" alt="">
+                </div>
+            </div>
+            <div class="images_voyagees2">
+                <img src="./Passion/Lac_Auvergne.jpg" alt="">
+                <img src="./Passion/Shiba_inu_mer.jpg" alt="">
+            </div>
+            <div class="images_voyages2">    
+                <img src="./Passion/Montagne.jpg" alt="">
+            </div>
         </div>
     </section>
-  
-    <div class="lecture-container">
+
+    <div class="lecture-container filtrable-section" data-category="lecture">
         <section class="lecture">
-            <div class="titre_lecture">
-                <h2>La lecture, un voyage sans fin </h2>
+            <div class="titre_lecture" style="border:none;">
+                <h2>Lire, pour nourrir l'imaginaire</h2>
             </div>
             <div class="images_lecture">
                 <img src="./Image livre/ai-generated-8772225_1280.jpg" alt="">
@@ -93,43 +130,61 @@
             <div class="image_lecture2">
                 <img src="./Image livre/ai-generated-8438585_1280.jpg" alt="">
             </div>
-            <div class="texte_lecture">
-                <p>Lire, c'est s'évader, explorer des mondes inconnus et vivre mille vies 
-                    sans bouger de chez soi. Plongée dans un roman, permet de me déconnecter 
-                    du quotidien et laisser libre cours à mon imagination. Cette passion 
-                    m'a aussi appris à rester concentrée pendant de longues heures, à analyser 
-                    des intrigues complexes et à m'imprégner de chaque détail. Ces compétences 
-                    sont essentielles dans le développement web, où il faut être 
-                    minutieux, structurer son raisonnement et résoudre des problèmes de manière 
-                    logique et efficace.</p>
+            <div class="texte_lecture" style="background:rgba(255,255,255,0.08);border-radius:25px;box-shadow:0 5px 15px rgba(0,0,0,0.08);padding:30px 25px;max-width:700px;margin:30px auto 0 auto;">
+                <p>La lecture m'accompagne au quotidien. Romans, bandes dessinées, livres illustrés… Chaque livre est 
+                    une immersion dans un univers unique, une source d'inspiration inépuisable. Lire, c'est explorer 
+                    des mondes, affiner son regard, développer son sens du rythme et de la narration.
+                    Autant de compétences précieuses en graphisme, où chaque visuel doit capter l'attention, transmettre 
+                    une émotion et raconter une histoire en un clin d'œil.</p>
             </div>
         </section>
     </div>
 
+    <hr style="border:0;height:8px;width:90%;margin:50px auto 30px auto;background:linear-gradient(90deg,#B2FEFA,#00c6ff);border-radius:4px;opacity:0.7;">
     <section class="dev">
-        <h2>Pourquoi le développement web et no-code ? 💻</h2>
-        <p>Toutes ces expériences ont renforcé ma capacité à apprendre en autonomie, à résoudre des 
-            problèmes et à m’adapter à différents contextes. Aujourd’hui, je souhaite mettre ces 
-            compétences au service d’un domaine stimulant et en constante évolution : le développement 
-            web et no-code. À travers cette recherche d’alternance, je suis prête à relever de nouveaux 
-            défis et à mobiliser ma rigueur, ma créativité et ma polyvalence pour concevoir des solutions 
-            digitales innovantes, accessibles et adaptées aux besoins des utilisateurs, en m’appuyant sur 
-            les outils du no-code et les bonnes pratiques du développement web.</p>
-    </section>
+        <h2>🎯 Pourquoi le graphisme et la communication visuelle ?</h2>
+        <p>Toutes ces expériences ont affûté mon sens de l'observation, ma créativité, ma rigueur et ma capacité à 
+            travailler de façon autonome. Aujourd'hui, je veux mettre ces compétences au service d'un métier où le 
+            visuel devient langage, où la forme sublime le fond.
+            <br><br>
+            Je souhaite accompagner des structures (entreprises, associations, artisans...) dans la création d'univers 
+            graphiques qui leur ressemblent et qui parlent à leur public. Mon objectif : concevoir des supports clairs, 
+            créatifs et cohérents, que ce soit pour le print, le web, ou les réseaux sociaux.
+            <br><br>
+            💼 À l'issue de ma formation, je réaliserai un stage professionnel de 4 semaines, et je suis dès maintenant 
+            à la recherche d'une entreprise prête à m'accueillir pour concrétiser mes acquis et contribuer activement à 
+            des projets visuels.</p>
     </section>
 
     <footer class="footer">
-        <div class="social-icons">
-            <a href="https://github.com/PamellaCode" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/pamella-defrend-739a81355" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3 class="footer-name">Pamella Defrend</h3>
+                <p> Future Graphiste & Designer Visuelle</p>
+            </div>
+
+            <div class="footer-section">
+                <nav class="footer-nav">
+                    <ul>
+                        <li><a href="./index.html">Accueil</a></li>
+                        <li><a href="./Mon_parcours.html">Parcours</a></li>
+                        <li><a href="./Qui_suis_je.html">Qui suis-je ?</a></li>
+                        <li><a href="./Contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="footer-section">
+                <h3>Mes coordonnées</h3>
+                <p><a href="mailto:defrendpamella@gmail.com">defrendpamella@gmail.com</a></p>
+                <p><a href="tel:0752763066">07.45.58.86.35</a></p>
+                <p class="footer-tagline">📶 Connectée, motivée, opérationnelle : je suis prête pour la formation et un stage en télétravail.</p>
+            </div>
         </div>
     </footer>
    
-    <button id="scrollToTop" class="computer-button">
-        <div class="screen">
-            <div class="content">⌂</div>
-        </div>
-        <div class="base"></div>
+    <button id="scrollToTop" class="scrolltop-palette">
+        <img src="Icone/palette-bouton.png" alt="Retour en haut" />
     </button>
 
     <script>
@@ -149,6 +204,25 @@
             window.scrollTo({
                 top: 0,
                 behavior: 'smooth'
+            });
+        });
+
+        // Système de filtrage type "pills" harmonisé avec Mon_parcours.html
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const sections = document.querySelectorAll('.filtrable-section');
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+                const filter = button.getAttribute('data-filter');
+                sections.forEach(section => {
+                    if (filter === 'all' || section.getAttribute('data-category') === filter) {
+                        section.style.display = '';
+                    } else {
+                        section.style.display = 'none';
+                    }
+                });
             });
         });
     </script>

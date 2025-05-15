@@ -9,17 +9,19 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <section class="top-page4">
-        <header>
+    <header class="main-header">
+        <div class="header-content">
+            <div class="logo">Pamella Defrend</div>
             <nav class="nav">
                 <li><a href="./index.html">Accueil</a></li>
                 <li><a href="./Mon_parcours.html">Parcours</a></li>
                 <li><a href="./Qui_suis_je.html">Qui suis-je ?</a></li>
                 <li><a href="./Contact.html">Contact</a></li>
             </nav>
-            <h1 class="big-title">Restons en contact !</h1>   
-        </header>        
-    </section>
+        </div>
+    </header>
+
+    <h1 class="big-title">Restons en contact !</h1>
 
     <section class="coordonees">
         <div class="contact">
@@ -27,7 +29,7 @@
             <div class="contact-info">
                 <p><i class="fas fa-user"></i> Pamella Defrend</p>
                 <p><i class="fas fa-envelope"></i> <a href="mailto:defrendpamella@gmail.com">defrendpamella@gmail.com</a></p>
-                <p><i class="fas fa-phone"></i> <a href="tel:07.52.76.30.66">07.52.76.30.66</a></p>
+                <p><i class="fas fa-phone"></i> <a href="tel:07.45.58.86.35">07.45.58.86.35</a></p>
                 <p><i class="fas fa-map-marker-alt"></i> Situé à Chamalières</p>
                 <p class="status"><i class="fas fa-wifi"></i> 📶 Connectée, motivée, opérationnelle : je suis prête pour l'alternance en télétravail.</p>
             </div>
@@ -39,10 +41,10 @@
     </section>
 
     <section class="formulaire">
-        <h2>Contactez-moi ici !</h2>
-        <div id="notification" class="notification"></div>
-
         <form method="post" action="https://formspree.io/f/mqaperww" class="contact-form">
+            <h2 class="form-title">Contactez-moi ici !</h2>
+            <div id="notification" class="notification"></div>
+
             <fieldset class="nom">
                 <p>
                     <label for="nom">Votre nom : </label> 
@@ -102,17 +104,34 @@
     </script>
 
     <footer class="footer">
-        <div class="social-icons">
-            <a href="https://github.com/PamellaCode" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/pamella-defrend-739a81355" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3 class="footer-name">Pamella Defrend</h3>
+                <p> Future Graphiste & Designer Visuelle</p>
+            </div>
+
+            <div class="footer-section">
+                <nav class="footer-nav">
+                    <ul>
+                        <li><a href="./index.html">Accueil</a></li>
+                        <li><a href="./Mon_parcours.html">Parcours</a></li>
+                        <li><a href="./Qui_suis_je.html">Qui suis-je ?</a></li>
+                        <li><a href="./Contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="footer-section">
+                <h3>Mes coordonnées</h3>
+                <p><a href="mailto:defrendpamella@gmail.com">defrendpamella@gmail.com</a></p>
+                <p><a href="tel:0752763066">07.45.58.86.35</a></p>
+                <p class="footer-tagline">🌐 Connectée, motivée, opérationnelle : je suis prête pour la formation et un stage en télétravail.</p>
+            </div>
         </div>
     </footer>
 
-    <button id="scrollToTop" class="computer-button">
-        <div class="screen">
-            <div class="content">⌂</div>
-        </div>
-        <div class="base"></div>
+    <button id="scrollToTop" class="scrolltop-palette">
+        <img src="Icone/palette-bouton.png" alt="Retour en haut" />
     </button>
 
     <script>

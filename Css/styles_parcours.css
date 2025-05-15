@@ -30,7 +30,7 @@ section.top-page3::after{
 }
 
 section.dev {
-    margin: 30px auto;
+    margin-top: 40px;
     width: 90%;
     max-width: 1400px;
     font-weight: 350;
@@ -41,6 +41,8 @@ section.dev {
     border-radius: 20px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 section.dev:hover {
@@ -102,7 +104,7 @@ div.image1 {
     position: relative;
     width: 100%;
     height: 400px;
-    margin: 150px 0 30px 0;
+    margin: 40px 0 30px 0;
     border-radius: 15px;
     overflow: hidden;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
@@ -121,61 +123,31 @@ div.image1 img {
     transition: transform 0.3s ease;
 }
 
-section.projet {
-    margin: 70px auto 30px auto;
+section.projet, section.formation, section.experiencepro {
+    margin-top: 40px;
     width: 90%;
-    max-width: 1000px;
+    max-width: 1400px;
     font-weight: 350;
-    padding: 20px;
+    padding: 40px;
     display: flex;
-    justify-content: space-between;
-    background: linear-gradient(to right,#00c6ff,#B2FEFA);
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    flex-direction: column;
+    background: linear-gradient(135deg, #B2FEFA, #00c6ff);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+section.projet:hover, section.formation:hover, section.experiencepro:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
 }
 
 div.text {
     margin-top: 50px;
     font-size: 1.1em;
     color: #333;
-}
-
-section.formation {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: 0 auto 100px auto;
-    width: 90%;
-    max-width: 1500px;
-    padding: 20px;
-    background: linear-gradient(to right,#B2FEFA, #00c6ff);
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-section.formation:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-}
-
-section.experiencepro {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: 0 auto 100px auto;
-    width: 90%;
-    max-width: 1500px;
-    padding: 20px;
-    background: linear-gradient(to right,#B2FEFA, #00c6ff);
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-section.experiencepro:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
 /* Ajustement des images dans les sections */
@@ -211,11 +183,109 @@ div.formation {
     
 }
 
+/* Style pour le footer */
 footer.footer {
     background: url("../Arrière_plan_haut/pexels-dana-tentis-118658-370799.jpg");
     background-size: cover;
-    height: 80px;
-    padding: 25px;
+    background-position: center;
+    min-height: 400px;
+    padding: 80px 0 120px 0;
+    color: white;
+    margin-top: 100px;
+    position: relative;
+}
+
+footer.footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.3),
+        rgba(0, 0, 0, 0.6)
+    );
+    backdrop-filter: blur(3px);
+    z-index: 1;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px 60px 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.footer-section {
+    flex: 1;
+    padding: 0 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.footer-name {
+    font-size: 32px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.footer-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-nav li {
+    margin: 15px 0;
+}
+
+.footer-nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.footer-nav a:hover {
+    color: #B2FEFA;
+}
+
+.footer-section h3 {
+    margin-bottom: 25px;
+    font-size: 24px;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.footer-section p {
+    margin: 12px 0;
+    font-size: 16px;
+}
+
+.footer-section a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+    color: #B2FEFA;
+}
+
+.footer-tagline {
+    margin-top: 25px;
+    font-style: italic;
+    line-height: 1.6;
+    max-width: 300px;
 }
 
 /* Animation pour les images */
@@ -389,7 +459,7 @@ section.dev:hover, section.projet:hover, section.formation:hover, section.experi
 /* Ajustement des titres avec icônes */
 h1.big-title i, h2 i {
     margin-right: 15px;
-    font-size: 1.2em;
+    font-size: 80px;
 }
 
 /* Animation pour les icônes dans la navigation */
@@ -723,4 +793,118 @@ section.top-page3 .nav a:hover {
     .content {
         font-size: 18px;
     }
+}
+
+/* Header principal */
+.main-header {
+    background: url("../Arrière_plan_haut/pexels-dana-tentis-118658-370799.jpg");
+    background-size: cover;
+    background-position: center;
+    padding: 30px 50px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    height: 120px;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
+    height: 100%;
+}
+
+.logo {
+    font-size: 32px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+/* Menu de navigation */
+nav.nav {
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    gap: 40px;
+}
+
+nav.nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 20px;
+    transition: color 0.3s ease;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+nav.nav a:hover {
+    color: #B2FEFA;
+}
+
+.filter-menu {
+    display: flex;
+    justify-content: center;
+    gap: 1.2rem;
+    padding: 1rem 0 2.5rem 0;
+    background: transparent;
+    margin-top: 50px;
+}
+
+.filter-btn {
+    background-color: white;
+    color: #00c6ff;
+    border: none;
+    padding: 8px 16px;
+    margin: 0 5px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.filter-btn:hover {
+    background-color: #00c6ff;
+    color: white;
+}
+
+.filter-btn.active {
+    background-color: #00c6ff;
+    color: white;
+    box-shadow: 0 2px 8px rgba(0, 198, 255, 0.3);
+}
+
+.section-title {
+    color: #00c6ff;
+    font-size: 2em;
+    margin-bottom: 30px;
+    text-align: center;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background: linear-gradient(to right, #B2FEFA, #00c6ff);
+    border-radius: 3px;
+}
+
+.big-title {
+    color: white;
+    font-size: 80px;
+    font-family: 'Sour Gummy', cursive;
+    font-weight: 100;
+    text-align: center;
+    margin: 150px 0 0 0;
+    padding: 20px 0;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
 }
